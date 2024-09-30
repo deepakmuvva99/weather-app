@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- FontAwesome for Icons -->
+</head>
+<body>
+
+    
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="weather.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+   
+    <audio id="backgroundAudio" loop>
+        <source src="rain-sound.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
+
+    <div class="phone">
+        <h1>Weather App</h1>
+        <input type="text" id="cityInput" placeholder="Enter city name...">
+        <button onclick="getWeather()">Get Weather</button>
+        <div class="weather-details-card">
+            <i class="fas fa-sun weather-icon"></i>
+            <div id="weatherDetails" class="weather-info">
+                <p id="cityName">City: N/A</p>
+                <p id="temperature">Temperature: N/A</p>
+                <p id="weatherDescription">Weather: N/A</p>
+                <p id="humidity">Humidity: N/A</p>
+                <p id="windSpeed">Wind Speed: N/A</p> 
+                <p id="feelsLike">Feels Like: N/A</p> 
+            </div>
+        </div>
+        <button id="musicButton" onclick="toggleMusic()">Play Music</button>
+        <audio id="backgroundAudio" src="background-music.mp3" loop></audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
